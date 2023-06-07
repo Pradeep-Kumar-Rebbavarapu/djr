@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
 
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
+import CreateRoom from "../../frontend/src/routes/CreateRoom";
+import Room from "../../frontend/src/routes/Room";
+import DjangoRoom from "../../frontend/src/routes/DjangoRoom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CreateRoom/>} />
+        <Route path="/room/:roomID" element={<Room/>} />
+        <Route path="/dj/room/:roomID" element={<DjangoRoom/>} />
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
