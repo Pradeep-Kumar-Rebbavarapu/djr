@@ -6,9 +6,9 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import CreateRoom from "../../frontend/src/routes/CreateRoom";
-import Room from "../../frontend/src/routes/Room";
-import DjangoRoom from "../../frontend/src/routes/DjangoRoom";
+import CreateRoom from "./src/routes/CreateRoom";
+import Room from "./src/routes/Room";
+import DjangoRoom from "./src/routes/DjangoRoom";
 function App() {
   return (
     <>
